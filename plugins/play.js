@@ -46,8 +46,8 @@ ${vid.url}
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: 'DONASI',
-               url: 'https://saweria.co/ilmanhdyt',
+               displayText: 'Owner',
+               url: 'https://wa.me/6281252848955',
              }
 
            },
