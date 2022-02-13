@@ -33,8 +33,8 @@ let premium = `
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: 'Owner',
-               url: 'https://wa.me/6281252848955'
+               displayText: 'Grup Bot',
+               url: 'https://chat.whatsapp.com/CTgARPa75SL9MbBMuOmZxH'
              }
 
            },
