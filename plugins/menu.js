@@ -28,33 +28,33 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭────ꕥ %me ꕥ────
-│✾ Version: %version
-│✾ Library: Baileys-MD
-│✾ Mode: ${global.opts['self'] ? 'Self' : 'publik'}
-│✾ Runtime: %uptime
-╰❑
-╭─❑ 「 INFO USER 」 ❑──
-│ ✾ Name: %name
-│ ✾ Status: ---
-│ ✾ Limit: %limit
-│ ✾ Money: %money
-│ ✾ Exp: %totalexp
-│ ✾ Level: %level
-│ ✾ Role: %role
-╰❑
-╭─❑ 「 INFORMASI 」 ❑──
+╭────「 %me 」
+│› Version: %version
+│› Library: Baileys-MD
+│› Mode: ${global.opts['self'] ? 'Self' : 'publik'}
+│› Runtime: %uptime
+╰─────
+
+╭─「 INFO USER 」
+│› Name: %name
+│› Status: ---
+│› Limit: %limit
+│› Money: %money
+│› Exp: %totalexp
+│› Level: %level
+│› Role: %role
+╰─────
+
+╭─「 INFORMASI 」
 │ Bot ini masih tahap beta
 │ apabila ada bug/eror harap
 │ lapor ke owner
-╰❑
+╰─────
 %readmore`.trimStart(),
   header: '╭─「 %category 」',
-  body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  body: '│› %cmd %islimit %isPremium',
+  footer: '╰─────\n',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
@@ -162,40 +162,26 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
          hydratedTemplate: {
            hydratedContentText: text.trim(),
            locationMessage: { 
-           jpegThumbnail: fs.readFileSync('./media/shiraori.jpg') },
+           jpegThumbnail: fs.readFileSync('./media/tes.jpg') },
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '💠 Source Code',
-               url: 'https://github.com/ilmanhdyt/ShiraoriBOT-Md'
-             }
-
-           },
-             {
-             callButton: {
-               displayText: 'Nomor Owner',
-               PhoneNumber: '0813-5104-7727'
+               displayText: 'Group Bot',
+               url: 'https://chat.whatsapp.com/FbcqjCn16T6Gxrh4km4Tvf'
              }
 
            },
                {
              quickReplyButton: {
-               displayText: '🧒 Owner',
+               displayText: 'Owner',
                id: '.owner',
-             }
-
-           },
-               {
-             quickReplyButton: {
-               displayText: '💲 Donasi',
-               id: '.donasi',
              }
 
            },
            {
              quickReplyButton: {
-               displayText: '📍 Credits',
-               id: '.tqto',
+               displayText: 'Donasi',
+               id: '.donasi',
              }
            }]
          }
